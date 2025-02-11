@@ -587,3 +587,21 @@ textarea{
         overflow: hidden;
     }
 }
+
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    .bg-green {
+        background-color: #084C41 !important;
+    }
+    .text-white {
+        color: white !important;
+    }
+    .bg-white {
+        background-color: white !important;
+    }
+    /* Add any other specific styles you need for printing */
+}
