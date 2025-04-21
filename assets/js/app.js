@@ -185,6 +185,23 @@ const showListData = (listData, listContainer) => {
         for(const key in listItem){
             let subItemElem = document.createElement('span');
             subItemElem.classList.add('preview-item-val');
+            
+            // Style project elements
+            if(key === 'proj_title') {
+                // subItemElem.style.fontWeight = 'bold';
+                // subItemElem.style.fontStyle = 'italic';
+                // subItemElem.style.fontSize = '1.2em';
+                subItemElem.style.marginBottom = '0.5rem';
+            } else if(key === 'proj_link') {
+                subItemElem.style.fontWeight = 'bold';
+                subItemElem.style.marginBottom = '0.5rem';
+                // subItemElem.style.color = 'var(--clr-blue)';
+            } else if(key === 'proj_description') {
+                subItemElem.style.marginBottom = '1rem';
+                subItemElem.style.fontSize = '0.95em';
+                subItemElem.style.color = 'var(--clr-grey)';
+            }
+            
             subItemElem.innerHTML = `${listItem[key]}`;
             itemElem.appendChild(subItemElem);
         }
